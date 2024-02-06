@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex: 1;
+}
+nav{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 2vmin 6vmin;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    z-index: 999;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2vmax;
+    transition: all 0.2s;
+}
+.fa-compass:hover{
+    transform: scale(1.1);
+}
+.options{
+    display: flex;
+    gap: 2vmin;
+    align-items: center;
+}
+.options>a{
+    text-decoration: none;
+    color: #222222;
+    transition: all 0.2s;
+    font-size: 2vmin;
+}
+.options>a:hover{
+    transform: scale(1.05);
+    color: #fe424d  ;
+}
+footer{
+    width: 100%;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vmin;
+}
+.f-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vmin;
+}
+.f-info-socials{
+    font-size: 2.5vmin;
+    display: flex;
+    flex-direction: row;
+    gap: 3vmin;
+}
+.f-info-text{
+    font-size: 2.8vmin;
+}
+.f-info-links{
+    display: flex;
+    gap: 1.3vmin;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+#parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vmin;
+    padding-top: 4vmin;
+}
+.main-heading{
+    font-size: 2vmax;
+    font-weight: 700;
+}
+#main-grid{
+    padding: 3vmin;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    gap: 4vmin;
+    /* border: 1px solid black; */
+}
+#main-grid a{
+    text-decoration: none;
+}
+.custom-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 1vmin;
+    /* padding: 2vmin; */
+    color: black;
+}
+.custom-card>img{
+    width: 21vmax;
+    height: 35vmin;
+    border-radius: 10px;
+}
+.overlay{
+    position: absolute;
+    width: 21vmax;
+    height: 35vmin;
+    background-color: rgb(184, 184, 184);
+    opacity: 0;
+    top: 0;
+    transition: all 0.2s;
+}
+.custom-card:hover{
+    .overlay{
+        opacity: 0.2;
+    }
+    .card-details{
+        color: #4d4d4d;
+    }
+}
+.property-title{
+    font-size: 1.1vmax;
+    font-weight: 600;
+}
+.property-price{
+    font-size: 1vmax;
+}
+.form-main{
+    padding: 0 4vmin 8vmin 4vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vmin;
+}
+.custom-form{
+    padding: 2vmin 4vmin;
+    width: 70vw;
+    border-radius: 10px;
+    border: 1px solid #fe424d;
+}
+.custom-legend{
+    padding: 0.5vmin;
+    color: white;
+    background-color: #fe424d;
+}
+fieldset>form{
+    display: flex;
+    flex-direction: column;
+    gap: 3vmin;
+    /* align-items: center; */
+}
+fieldset>form .form-control{
+    border-radius: 5px;
+    border: 1px solid #fe424d;
+    padding: 1vmin;
+}
+fieldset>form button{
+    align-self: center;
+    padding: 1vmin 3vmin;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    background-color: #fe424d;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vmin;
+}
+#show-main{
+    display: flex;
+    flex-direction: column;
+    gap: 5vmin;
+    align-items: center;
+    padding-bottom: 10vmin;
+    /* max-width: 60vw; */
+}
+#show-main img{
+    height: 35vmin;
+    width: 32vmax;
+    border-radius: 15px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vmin;
+}
+.description, .price{
+    font-size: 2.4vmin;
+}
+.location{
+    font-size: 1.7vmin;
+    color: gray;
+}
+.buttons{
+    display: flex;
+    gap: 3vmin;
+}
+.buttons button{
+    padding: 1vmin;
+    border-radius: 10px;
+    background-color: #fe424d;
+    color: white;
+    border: none;
+}
+
+@media (max-width:1200px){
+    #main-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width:650px){
+    #main-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:400px){
+    #main-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

@@ -1,0 +1,101 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <div id="parent">
+    <div class="form-main">
+      <h2>Edit Property (ID : <%= listing._id %>)</h2>
+      <fieldset class="custom-form">
+        <!-- <legend class="custom-legend">Fill this Form</legend> -->
+        <form
+          method="post"
+          action="/listings/<%= listing._id %>?_method=PUT"
+          class="needs-validation"
+          novalidate
+        >
+          <div class="field">
+            <label for="title">Title of Property</label>
+            <input
+              id="title"
+              type="text"
+              name="listing[title]"
+              class="form-control"
+              value="<%= listing.title %>"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid title.</div>
+          </div>
+          <div class="field">
+            <label for="description">Description of Property</label>
+            <textarea
+              id="description"
+              name="listing[description]"
+              cols="30"
+              rows="10"
+              class="form-control"
+              required
+            >
+<%= listing.description %></textarea
+            >
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+              Please provide a valid description.
+            </div>
+          </div>
+          <div class="field">
+            <label for="image">Image of Property</label>
+            <input
+              id="image"
+              type="text"
+              name="listing[image]"
+              class="form-control"
+              value="<%= listing.image %>"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid image link.</div>
+          </div>
+          <div class="field">
+            <label for="price">Price</label>
+            <input
+              id="price"
+              type="text"
+              name="listing[price]"
+              class="form-control"
+              value="<%= listing.price %>"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid price.</div>
+          </div>
+          <div class="field">
+            <label for="location">Location of Property</label>
+            <input
+              id="location"
+              type="text"
+              name="listing[location]"
+              class="form-control"
+              value="<%= listing.location %>"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid location.</div>
+          </div>
+          <div class="field">
+            <label for="country">Country</label>
+            <input
+              id="country"
+              type="text"
+              name="listing[country]"
+              class="form-control"
+              value="<%= listing.country %>"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid country.</div>
+          </div>
+          <button>POST</button>
+        </form>
+      </fieldset>
+    </div>
+  </div>
+</body>
